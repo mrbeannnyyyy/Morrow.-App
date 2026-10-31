@@ -1,0 +1,95 @@
+{
+  "name": "morrow-browser",
+  "version": "1.0.2",
+  "description": "A calm, thoughtfully designed desktop web browser.",
+  "author": "Morrow",
+  "private": true,
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "tsc --noEmit && vite build && tsc -p tsconfig.electron.json",
+    "start": "electron .",
+    "package:mac": "npm run build && electron-builder --mac dmg",
+    "package:mac:all": "npm run build && electron-builder --mac dmg zip",
+    "package:win": "npm run build && electron-builder --win nsis",
+    "package:linux": "npm run build && electron-builder --linux AppImage deb"
+  },
+  "build": {
+    "appId": "com.morrow.browser",
+    "productName": "Morrow",
+    "asar": true,
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json",
+      "!**/*.map",
+      "!sources/**/*",
+      "!build/**/*"
+    ],
+    "mac": {
+      "icon": "build/icon.icns",
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "dmg": {
+      "title": "Morrow ${version}",
+      "icon": "build/icon.icns",
+      "background": "build/dmg-background.png",
+      "window": {
+        "width": 540,
+        "height": 380
+      },
+      "iconSize": 112
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "Morrow-${version}-Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Morrow"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Network;WebBrowser;"
+    },
+    "artifactName": "Morrow-${version}-${arch}.${ext}"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "electron": "^33.2.1",
+    "electron-builder": "^26.15.3",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "wait-on": "^8.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrbeannnyyyy/Morrow.-App.git"
+  }
+}
