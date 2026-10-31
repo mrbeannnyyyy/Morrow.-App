@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.7
+
+- Shows release notes the first time a new app version opens.
+- Adds a default browser control in Setup & preferences.
+- Adds a browsable release history and a Mac installation guide to the website.
+
+
 ## 1.0.6
 
 - Repackaged with an ad hoc macOS signature for the manual Gatekeeper approval flow.

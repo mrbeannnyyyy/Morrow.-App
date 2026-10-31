@@ -1,6 +1,6 @@
 {
   "name": "morrow-browser",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A calm, thoughtfully designed desktop web browser.",
   "author": "Morrow",
   "private": true,
@@ -41,7 +41,16 @@
         "zip"
       ],
       "identity": "-",
-      "hardenedRuntime": true
+      "hardenedRuntime": true,
+      "protocols": [
+        {
+          "name": "Morrow Web Browser",
+          "schemes": [
+            "http",
+            "https"
+          ]
+        }
+      ]
     },
     "dmg": {
       "title": "Morrow ${version}",
