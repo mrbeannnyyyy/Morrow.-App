@@ -3,6 +3,7 @@
 ## 1.0.4
 
 - Added a short branded intro each time the app opens.
+- Added subtle, reduced-motion-aware transitions when opening tabs and the library.
 
 ## 1.0.3
 

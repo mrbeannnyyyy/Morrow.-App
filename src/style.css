@@ -159,3 +159,12 @@
 @keyframes startup-screen{0%,70%{opacity:1}100%{opacity:0}}
 @keyframes startup-mark-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.startup-intro{animation-duration:.45s}.startup-mark,.startup-tag{animation:none}}
+
+/* Small spatial cues for opening tabs and returning to the start page. */
+.tab{animation:tab-enter .18s cubic-bezier(.23,1,.32,1) both}
+.home-content{animation:newtab-enter .26s cubic-bezier(.23,1,.32,1) both}
+.library-pane{animation:library-enter .2s cubic-bezier(.23,1,.32,1) both}
+@keyframes tab-enter{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:translateY(0)}}
+@keyframes newtab-enter{from{opacity:0;transform:translate(-50%,calc(-50% + 4px))}to{opacity:1;transform:translate(-50%,-50%)}}
+@keyframes library-enter{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.tab,.home-content,.library-pane{animation:none}}
