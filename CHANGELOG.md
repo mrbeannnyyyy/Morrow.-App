@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.5
+
+- Added automatic checks for newer Morrow releases with a download-page shortcut.
+- Added release notes and a latest-version macOS installer page to the website.
+
+
 ## 1.0.4
 
 - Added a short branded intro each time the app opens.
