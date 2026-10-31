@@ -149,3 +149,13 @@
 .app.dark .profile{background:#493630;color:#f0ddd6}
 .toolbar{transition:background .25s ease,border-color .25s ease}
 @media(prefers-reduced-motion:reduce){.chrome,.toolbar{transition:none}}
+
+/* Short, non-blocking branded greeting on each app launch. */
+.startup-intro{position:fixed;inset:0;z-index:30;display:grid;place-content:center;justify-items:center;gap:15px;pointer-events:none;background:radial-gradient(ellipse at 50% 46%,#f0e7e2 0%,#f8f7f4 55%,#f8f7f5 100%);animation:startup-screen .95s cubic-bezier(.23,1,.32,1) both}
+.app.dark .startup-intro{background:radial-gradient(ellipse at 50% 46%,#302927 0%,#222322 58%,#1c1d1c 100%)}
+.startup-mark{font:800 56px/1 Manrope,sans-serif;letter-spacing:-5px;color:var(--text);animation:startup-mark-in .55s cubic-bezier(.23,1,.32,1) both}
+.startup-mark span{color:var(--accent)}
+.startup-tag{font:700 9px 'DM Sans',sans-serif;letter-spacing:2.4px;color:var(--muted);animation:startup-mark-in .45s cubic-bezier(.23,1,.32,1) .08s both}
+@keyframes startup-screen{0%,70%{opacity:1}100%{opacity:0}}
+@keyframes startup-mark-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.startup-intro{animation-duration:.45s}.startup-mark,.startup-tag{animation:none}}
