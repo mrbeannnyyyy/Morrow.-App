@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.6
+
+- Repackaged with an ad hoc macOS signature for the manual Gatekeeper approval flow.
+
+
 ## 1.0.5
 
 - Added automatic checks for newer Morrow releases with a download-page shortcut.

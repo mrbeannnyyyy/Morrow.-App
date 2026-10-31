@@ -1,6 +1,6 @@
 {
   "name": "morrow-browser",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A calm, thoughtfully designed desktop web browser.",
   "author": "Morrow",
   "private": true,
@@ -35,11 +35,13 @@
     "mac": {
       "icon": "build/icon.icns",
       "category": "public.app-category.productivity",
-      "notarize": true,
+      "notarize": false,
       "target": [
         "dmg",
         "zip"
-      ]
+      ],
+      "identity": "-",
+      "hardenedRuntime": true
     },
     "dmg": {
       "title": "Morrow ${version}",
