@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Fixed the top tab bar so its background and borders follow dark mode.
+
 ## 1.0.2
 
 - Fixed startup failure caused by registering the browser import IPC handlers twice.

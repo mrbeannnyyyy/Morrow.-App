@@ -139,3 +139,13 @@
 @keyframes onboarding-step-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:700px){.welcome-screen{padding:20px 16px}.welcome-flow{width:min(100%,560px)}.flow-card{padding:29px 23px 25px;border-radius:20px}.flow-card h1{font-size:37px}.theme-preview{height:98px;padding:11px}.theme-preview .preview-window{width:112px;height:70px}.preview-window b{height:21px}.tab-preview{height:166px}.flow-next{min-width:160px}.flow-footer{gap:8px}}
 @media(prefers-reduced-motion:reduce){.flow-card{animation:none}}
+
+/* Keep both browser chrome rows in sync with the selected theme. */
+.chrome{transition:background .25s ease,border-color .25s ease}
+.app.dark .chrome{background:#232422;border-bottom-color:#393a37}
+.app.dark .tab.selected{background:#252625;border-color:#383936;border-bottom-color:#252625}
+.app.dark .tab{color:#aaa8a1}
+.app.dark .tab.selected{color:#eeece8}
+.app.dark .profile{background:#493630;color:#f0ddd6}
+.toolbar{transition:background .25s ease,border-color .25s ease}
+@media(prefers-reduced-motion:reduce){.chrome,.toolbar{transition:none}}
