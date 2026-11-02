@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.8-beta.1
+## 1.0.8-beta.6
 
 - Adds matching bookmark, history, and shortcut suggestions while you type.
 - Adds live Google search suggestions to the home search and address bar.
