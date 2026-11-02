@@ -193,6 +193,33 @@
 .dark .shortcut-wrap:hover,.dark .shortcut-wrap:focus-within{border-color:#e3d6ce;box-shadow:0 10px 25px #0004}
 .shortcut-wrap:hover .shortcut-edit,.shortcut-wrap:focus-within .shortcut-edit{opacity:1}
 .shortcut-edit:hover{background:var(--tint);color:var(--text)}
+.shortcut-wrap{isolation:isolate;overflow:visible}
+.shortcut-wrap .shortcut{z-index:0}
+.shortcut-wrap .shortcut-edit{z-index:4;pointer-events:none;width:29px;height:29px;top:8px;right:8px;border:1px solid var(--line);box-shadow:0 3px 10px #00000020;opacity:0;transform:translateY(-2px);transition:opacity .14s ease-out,transform .14s ease-out,background-color .14s ease-out,color .14s ease-out}
+.shortcut-wrap:hover .shortcut-edit,.shortcut-wrap:focus-within .shortcut-edit{opacity:1;pointer-events:auto;transform:translateY(0)}
+.shortcut-edit:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.download-trigger{position:relative}
+.download-indicator,.download-tab-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);position:absolute;right:5px;top:5px;box-shadow:0 0 0 2px var(--surface)}
+.download-tab-dot{position:static;display:inline-block;margin-left:5px;vertical-align:middle}
+.zoom-chip{height:26px;min-width:44px;padding:0 7px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--text);font:600 10px 'DM Sans';cursor:pointer;opacity:.82;animation:zoom-chip-in .16s ease-out}
+.zoom-chip.visible{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 50%,var(--line));opacity:1}
+.zoom-chip:hover{background:var(--tint);opacity:1}
+@keyframes zoom-chip-in{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:translateY(0)}}
+.download-list .list-heading{margin-bottom:10px}
+.download-row{display:flex;align-items:center;gap:9px;padding:10px 2px;border-bottom:1px solid var(--line);animation:download-row-in .2s ease-out both}
+@keyframes download-row-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.download-file-icon{width:27px;height:31px;flex:none;display:grid;place-items:center;border:1px solid var(--line);border-radius:7px;background:var(--soft);color:var(--accent)}
+.download-file-info{min-width:0;flex:1}
+.download-file-info strong,.download-file-info small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.download-file-info strong{font-size:10px;font-weight:600;color:var(--text)}
+.download-file-info small{font-size:9px;color:var(--muted);margin-top:4px}
+.download-progress{height:3px;margin-top:7px;overflow:hidden;border-radius:5px;background:var(--line)}
+.download-progress span{height:100%;width:100%;display:block;transform-origin:left center;background:var(--accent);border-radius:inherit;transition:transform .18s ease-out}
+.download-row-actions{display:flex;gap:2px;flex:none}
+.download-row-actions button,.download-cancel{width:27px;height:27px;display:grid;place-items:center;border:0;border-radius:7px;background:transparent;color:var(--muted);cursor:pointer}
+.download-row-actions button:hover{background:var(--tint);color:var(--text)}
+.download-cancel:hover{background:var(--tint);color:#b35f52}
+@media(prefers-reduced-motion:reduce){.shortcut-wrap .shortcut-edit,.download-row,.zoom-chip,.download-progress span{animation:none;transition:none}}
 @keyframes suggestions-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.suggestion-list,.suggestion-item{animation:none;transition:none}}
 
