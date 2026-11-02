@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.8-beta.1
+
+- Adds matching bookmark, history, and shortcut suggestions while you type.
+- Adds live Google search suggestions to the home search and address bar.
+- Improves shortcut-card hover and keyboard-focus feedback.
+
+
 ## 1.0.7
 
 - Shows release notes the first time a new app version opens.
