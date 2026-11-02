@@ -1,10 +1,13 @@
 # Changelog
 
-## 1.0.8-beta.6
+## 1.0.8-beta.7
 
 - Adds matching bookmark, history, and shortcut suggestions while you type.
 - Adds live Google search suggestions to the home search and address bar.
 - Improves shortcut-card hover and keyboard-focus feedback.
+- Separates beta installs and beta update checks from the public app.
+- Shows the beta channel and sends beta update actions to the beta download page.
+- Keeps the new-tab page visible in shorter windows and animates the download affordance.
 
 
 ## 1.0.7

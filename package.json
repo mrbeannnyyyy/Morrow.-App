@@ -1,6 +1,6 @@
 {
   "name": "morrow-browser",
-  "version": "1.0.8-beta.6",
+  "version": "1.0.8-beta.7",
   "description": "A calm, thoughtfully designed desktop web browser.",
   "author": "Morrow",
   "private": true,
@@ -13,7 +13,8 @@
     "package:mac": "npm run build && electron-builder --mac dmg",
     "package:mac:all": "npm run build && electron-builder --mac dmg zip",
     "package:win": "npm run build && electron-builder --win nsis",
-    "package:linux": "npm run build && electron-builder --linux AppImage deb"
+    "package:linux": "npm run build && electron-builder --linux AppImage deb",
+    "package:mac:beta": "npm run build && electron-builder --mac dmg --arm64 --config electron-builder.beta.yml"
   },
   "build": {
     "appId": "com.morrow.browser",

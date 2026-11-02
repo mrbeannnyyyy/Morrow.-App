@@ -1,0 +1,37 @@
+appId: com.morrow.browser.beta
+productName: Morrow Beta
+asar: true
+forceCodeSigning: true
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - package.json
+  - '!**/*.map'
+  - '!sources/**/*'
+  - '!build/**/*'
+mac:
+  icon: build/icon.icns
+  category: public.app-category.productivity
+  notarize: false
+  target:
+    - dmg
+    - zip
+  identity: '-'
+  hardenedRuntime: true
+  protocols:
+    - name: Morrow Beta Web Browser
+      schemes:
+        - http
+        - https
+dmg:
+  title: Morrow Beta ${version}
+  icon: build/icon.icns
+  background: build/dmg-background.png
+  window:
+    width: 540
+    height: 380
+  iconSize: 112
+artifactName: Morrow-Beta-${version}-${arch}.${ext}
